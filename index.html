@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Personal Portfolio </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="logo.png" class="logo" alt="Logo">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p> Full Stack Developer</p> <br>
+                <h1> Hi, I'm <span> Manoj Adhikari</span> <br> from Dented Code Academy </h1>
+            </div>
+        </div>
+    </div>
+
+    <!--------------------- About ME Section ------------------>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="Manoj.jpg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title"> ABOUT ME</h1>
+                    <br>
+                    <p>
+                        I am a Full Stack Developer. I have been working in this field for the past 2 years. I have
+                        experience in HTML, CSS, JavaScript, React, Node.js, Express.js, MongoDB, and many more. I have
+                        worked on many projects and have learned a lot from them. I am a quick learner and always ready
+                        to learn new technologies.
+                    </p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('SKILLS', event)"> SKILLS </p>
+                        <p class="tab-links" onclick="opentab('EXPERIENCE', event)"> EXPERIENCE </p>
+                        <p class="tab-links" onclick="opentab('EDUCATION', event)"> EDUCATION </p>
+                    </div>
+                    <div class="tab-contents active-tab" id="SKILLS">
+                        <ul>
+                            <li> <span>HTML </span> <br> CSS </li>
+                            <li> <span>Web development </span> <br> web app development </li>
+                            <li> <span>app development </span> <br> building andriod/ios app </li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="EXPERIENCE">
+                        <ul>
+                            <li> <span>2019-2021 </span> <br> CS </li>
+                            <li> <span>2023 </span> <br> ADMINSTRATIVE INTERN</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="EDUCATION">
+                        <ul>
+                            <li> <span>2019-2021 </span> <br> DIPLOMA IN INFORMATION TECHNOLOGY </li>
+                            <li> <span>2021-2023 </span> <br> BACHELORS IN INFORMATION SYSTEM </li>
+                            <li> <span>2025 </span> <br> DENTED CODE ACADEMY </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        var tabLinks = document.getElementsByClassName("tab-links");
+        var tabContents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabName, event) {
+
+            for (let tabLink of tabLinks) {
+                tabLink.classList.remove("active-link");
+            }
+            for (let tabContent of tabContents) {
+                tabContent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabName).classList.add("active-tab");
+        }
+    </script>
+</body>
+
+</html>

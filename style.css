@@ -1,0 +1,184 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family:Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background:  #080808;
+    color: white;
+    font-size: 16px;
+}
+
+#header {
+    width: 100%;
+    height: 100vh;
+    background-image: url(image.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+  padding: 10px 10%;
+}
+nav {
+     display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+
+.logo {
+   width: 140px;
+}
+
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+
+nav ul li a {
+   color: #fff;
+   text-decoration: none;
+   font-size: 18px;
+   position: relative;
+}
+
+nav ul li a::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: red;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+.header-text {
+   margin-top: 20%;
+   font-size: 30px;
+}
+
+
+.header-text h1 {
+    font-size: 40px;
+    margin-top: 20px;
+}
+
+.header-text h1 span {
+    display: inline-block;
+    font-size: 40px;
+    font-weight: bold;
+    color: #db3434;  /* Blue color for 'Manoj' */
+    border-right: 4px solid #333;  /* Adds a cursor effect */
+    padding-right: 5px;  /* Keeps some space for the cursor */
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0; /* Initially hides the text */
+    animation: typing 3s steps(10) infinite, blink-caret 0.75s step-end infinite;
+}
+
+/* Animation for typing */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+/* Cursor blinking effect */
+@keyframes blink-caret {
+    50% {
+        border-color: transparent;
+    }
+}
+
+
+/* ------------------ABOUT ME SECTION-------------------- */
+
+#about {
+    padding: 80px 0;
+    color: rgb(226, 225, 181) ;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about-col-1 {
+    flex-basis: 35%;
+}
+.about-col-1 img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+.about-col-2 {
+    flex-basis: 60%;
+}
+
+.sub-title {
+    font-size: 35px;
+    font-weight: 600;
+    color: #db3434;
+}
+
+.tab-titles{
+    display: flex;
+    margin: 20px 0 40px;
+}
+
+.tab-links {
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position : relative;
+}
+
+.tab-links::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: red;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+
+.tab-links.active-link::after {
+    width: 50%;
+}
+
+.tab-contents ul li {
+    list-style: none;
+    margin: 10px 0;    
+}
+
+.tab-contents ul li span {
+    color: #db3434;
+    margin-right: 10px;
+}
+
+.tab-contents{
+display: none;
+}
+
+.tab-contents.active-tab{   
+    display: block;
+}
+    
+
